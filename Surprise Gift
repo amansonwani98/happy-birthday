@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise Gift 💝</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hearts"></div>
+
+  <div class="container">
+    <h2 class="title">I have a little surprise for you mela bacchaa 💕</h2>
+    <button id="heartBtn">❤️ Click Me ❤️</button>
+
+    <div id="surprise" class="hidden">
+      <h1>💖 Surprise My Love 💖</h1>
+      <p>You are the most special part of my life...  
+      This website is just for you 💕</p>
+      <img src="yourphoto.jpg" alt="Surprise" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  overflow: hidden;
+}
+
+/* Floating hearts background */
+.hearts::before, .hearts::after {
+  content: "💖 💕 💝 💓 💞";
+  position: absolute;
+  font-size: 40px;
+  animation: float 10s linear infinite;
+  opacity: 0.3;
+}
+.hearts::after {
+  animation-duration: 15s;
+  font-size: 50px;
+}
+
+@keyframes float {
+  0% { top: 100%; left: 10%; }
+  100% { top: -20%; left: 80%; }
+}
+
+.container {
+  text-align: center;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+#heartBtn {
+  background: #ff4b5c;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#heartBtn:hover {
+  background: #ff1e3c;
+  transform: scale(1.1);
+}
+
+#surprise {
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#surprise img {
+  max-width: 250px;
+  margin-top: 15px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,
